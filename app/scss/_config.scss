@@ -1,10 +1,12 @@
 // USER VARIABLES SECTION
 
 $accent: orange; // Accent Color
-$fontsize: 16px; // Body Font Size
+$fontsize: 14px; // Body Font Size
 $textcolor: #333; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 $roboto: Roboto, sans-serif; // Roboto Font Family
+$arsenal-reg: Arsenal-Rehular, sans-serif;
+$back-color: #fbf5ee;
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
@@ -29,14 +31,11 @@ $gutter: $grid-gutter-width;
   }
 }
 
-@include font("Roboto", normal, 400, "../fonts/roboto-regular-webfont.woff2");
-@include font("Roboto", italic, 400, "../fonts/roboto-italic-webfont.woff2");
-@include font("Roboto", normal, 700, "../fonts/roboto-bold-webfont.woff2");
 @include font(
-  "Roboto",
-  italic,
-  700,
-  "../fonts/roboto-bolditalic-webfont.woff2"
+  "Arsenal-Rehular",
+  regular,
+  400,
+  "../fonts/Arsenal-Regular.woff2"
 );
 
 // GENERAL DOCUMENT STYLES
@@ -46,27 +45,19 @@ $gutter: $grid-gutter-width;
 }
 
 ::selection {
-  background-color: $accent;
-  color: #fff;
-}
-
-input,
-textarea {
-  outline: none;
-  &:focus:required:invalid {
-    border-color: red;
-  }
-  &:required:valid {
-    border-color: green;
-  }
+  background-color: $back-color;
+  color: #f9ccbf;
 }
 
 body {
-  font-family: $roboto;
+  font-family: $arsenal-reg;
   font-size: $fontsize;
-  min-width: 320px;
-  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
   line-height: 1.65;
   overflow-x: hidden;
+  overflow-y: hidden;
   color: $textcolor;
+  background-color: $back-color;
 }
